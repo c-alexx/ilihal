@@ -69,8 +69,6 @@ Purpose     : Display controller configuration (single layer)
 
 #define  LCD_BASE_Addr               ((U32)(0x60000000|0x00000000))
 #define  LCD_BASE_Data               ((U32)(0x60000000|0x00020000))
-#define  LCD_REG                     (*(volatile U16 *)(LCD_BASE_Addr))
-#define  LCD_RAM                    (*(volatile U16 *)(LCD_BASE_Data))
 
 /*********************************************************************
  *

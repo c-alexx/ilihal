@@ -187,7 +187,6 @@ setting */
   * @{
   */ 
 void     ili9481_Init(void);
-uint16_t ili9481_ReadID(void);
 void     ili9481_WriteReg(uint16_t LCD_Reg);
 void     ili9481_WriteData(uint16_t RegValue);
 uint32_t ili9481_ReadData(uint16_t RegValue, uint8_t ReadSize);

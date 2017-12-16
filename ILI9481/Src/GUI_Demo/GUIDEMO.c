@@ -58,7 +58,7 @@ Purpose     : Several GUIDEMO routines
   */
 
 
-#include "GUIDEMO.h"
+#include <GUIDEMO.h>
 #include "main.h"
 
 /*********************************************************************

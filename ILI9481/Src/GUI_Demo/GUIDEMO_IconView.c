@@ -58,9 +58,9 @@ Purpose     : Washing machine demo
   */
 
 
+#include <GUIDEMO.h>
 #include <stddef.h>
 
-#include "GUIDemo.h"
 
 #if (SHOW_GUIDEMO_ICONVIEW && GUI_WINSUPPORT && GUI_SUPPORT_MEMDEV)
 

@@ -114,7 +114,6 @@
 /* #define USE_FULL_ASSERT    1U */
 
 /* USER CODE BEGIN Private defines */
-
 #define LCD_RAM   *(__IO uint16_t*)((uint32_t)0x60020000)  //LCD Data ADDR
 #define LCD_REG   *(__IO uint16_t*)((uint32_t)0x60000000)	 //LCD Reg  ADDR
 

@@ -80,7 +80,7 @@
 LCD_DrvTypeDef   ili9481_drv =
 {
 		ili9481_Init,
-		ili9481_ReadID,
+		0,
 		ili9481_DisplayOn,
 		ili9481_DisplayOff,
 		0,
@@ -119,21 +119,19 @@ LCD_DrvTypeDef   ili9481_drv =
 void ili9481_Init(void)
 {
 	/* Initialize ILI9481 low level bus layer ----------------------------------*/
-	LCD_IO_Init();
-
-	LCD_Delay(120);
+	HAL_Delay(50);
 	HAL_GPIO_WritePin(GPIOE, GPIO_PIN_1, GPIO_PIN_SET);
-	LCD_Delay(20);
+	HAL_Delay(120);
 	HAL_GPIO_WritePin(GPIOE, GPIO_PIN_1, GPIO_PIN_RESET);
-	LCD_Delay(20);
+	HAL_Delay(120);
 	HAL_GPIO_WritePin(GPIOE, GPIO_PIN_1, GPIO_PIN_SET);
-	LCD_Delay(20);
+	HAL_Delay(120);
 
 	/* Configure LCD */
 
 	//************* Start Initial Sequence **********//
 	ili9481_WriteReg(LCD_SLEEP_OUT);
-	LCD_Delay(120);
+	HAL_Delay(50);
 
 	ili9481_WriteReg(LCD_NORMAL_MODE_ON);
 
@@ -189,7 +187,7 @@ void ili9481_Init(void)
 	ili9481_WriteData(0x00);
 	ili9481_WriteData(0x01);
 	ili9481_WriteData(0xE0);
-	LCD_Delay(100);
+	HAL_Delay(100);
 	ili9481_WriteReg(LCD_DISPLAY_ON);
 
 	ili9481_WriteReg(LCD_MAC);
